@@ -1,7 +1,8 @@
 import React from 'react';
 import classes from './MealItemForm.module.css';
 import Input from '../UI/Input';
-function MealItemForm({id}) {
+import Button from '../UI/Button';
+function MealItemForm({ id }) {
   return (
     <form className={classes.form}>
       <label htmlFor=""></label>
@@ -16,7 +17,7 @@ function MealItemForm({id}) {
           defaultValue: '1',
         }}
       />
-      <button>+ Add</button>
+      <Button label="+ Add" />
     </form>
   );
 }
