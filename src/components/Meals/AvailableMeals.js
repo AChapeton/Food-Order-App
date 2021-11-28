@@ -34,7 +34,7 @@ function AvailableMeals() {
     <MealItem
       name={meal.name}
       description={meal.description}
-      price={meal.price}
+      mealPrice={meal.price}
     />
   ));
 
