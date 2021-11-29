@@ -2,8 +2,8 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import classes from './Modal.module.css';
 
-const Backdrop = ({ onClick }) => {
-  return <div className={classes.backdrop} onClick={onClick}></div>;
+const Backdrop = ({ onHideCart }) => {
+  return <div className={classes.backdrop} onClick={onHideCart}></div>;
 };
 
 const ModalOverlay = ({ children }) => {
@@ -14,11 +14,11 @@ const ModalOverlay = ({ children }) => {
   );
 };
 
-function Modal({ children, onClick }) {
+function Modal({ children, onHideCart }) {
   return (
     <>
       {ReactDOM.createPortal(
-        <Backdrop onClick={onClick} />,
+        <Backdrop onHideCart={onHideCart} />,
         document.getElementById('backdrop')
       )}
       {ReactDOM.createPortal(

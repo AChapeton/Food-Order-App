@@ -12,7 +12,7 @@ function Cart({ onHideCart }) {
   ].map((item) => <li className={classes['cart-items']}>{item.name}</li>);
 
   return (
-    <Modal onClick={onHideCart}>
+    <Modal onHideCart={onHideCart}>
       {cartItems}
       <div className={classes.total}>
         <span>Total Amount</span>
